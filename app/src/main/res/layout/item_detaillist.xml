@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:src="@mipmap/hongbaosaolei"
+        app:civ_border_color="@color/yellow"
+        app:civ_border_width="2dp"/>
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:text="小河"
+        android:textColor="#ff333333"
+        android:textSize="14sp"
+        />
+
+    <ImageView
+        android:id="@+id/lei"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="100dp"
+        android:src="@mipmap/ic_lei"
+        />
+
+    <TextView
+        android:id="@+id/money"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:gravity="right"
+        android:paddingRight="10dp"
+        android:text="6.16元"
+        android:textColor="#ff333333"
+        android:textSize="14sp"
+        />
+</LinearLayout>

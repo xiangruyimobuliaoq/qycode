@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/bg"
+                android:background="@color/bg_popwindow">
+
+    <LinearLayout
+        android:id="@+id/pop_anima"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_bg_history"
+        android:orientation="vertical"
+        android:paddingBottom="20dp">
+
+        <com.nst.qycode.view.FlowRadioGroup
+            android:id="@+id/rg"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/cunkuan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/selector_bg_red_black"
+                android:button="@null"
+                android:paddingBottom="5dp"
+                android:paddingLeft="25dp"
+                android:paddingRight="25dp"
+                android:paddingTop="5dp"
+                android:text="存款明细"
+                android:textColor="@drawable/selector_text_red_black"/>
+
+            <RadioButton
+                android:id="@+id/qukuan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/selector_bg_red_black"
+                android:button="@null"
+                android:paddingBottom="5dp"
+                android:paddingLeft="25dp"
+                android:paddingRight="25dp"
+                android:paddingTop="5dp"
+                android:text="取款明细"
+                android:textColor="@drawable/selector_text_red_black"/>
+
+            <RadioButton
+                android:id="@+id/fahongbao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/selector_bg_red_black"
+                android:button="@null"
+                android:paddingBottom="5dp"
+                android:paddingLeft="25dp"
+                android:paddingRight="25dp"
+                android:paddingTop="5dp"
+                android:text="发红包明细"
+                android:textColor="@drawable/selector_text_red_black"/>
+
+            <RadioButton
+                android:id="@+id/qianghongbao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/selector_bg_red_black"
+                android:button="@null"
+                android:paddingBottom="5dp"
+                android:paddingLeft="25dp"
+                android:paddingRight="25dp"
+                android:paddingTop="5dp"
+                android:text="抢红包明细"
+                android:textColor="@drawable/selector_text_red_black"/>
+
+        </com.nst.qycode.view.FlowRadioGroup>
+
+
+    </LinearLayout>
+</RelativeLayout>
+

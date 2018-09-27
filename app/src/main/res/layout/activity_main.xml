@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/bg3"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10">
+
+        <com.nst.qycode.view.NoScrollViewPager
+            android:id="@+id/viewpager_home"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <ImageButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/chat"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:backgroundTint="@color/trans"
+            android:visibility="visible"
+            android:layout_margin="20dp"/>
+    </RelativeLayout>
+
+
+    <RadioGroup
+        android:id="@+id/rg_home"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_alignParentBottom="true"
+        android:layout_weight="1"
+        android:background="@mipmap/gongnengtubiaodi"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:paddingTop="5dp">
+
+        <RadioButton
+            android:id="@+id/wanfa"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:checked="true"
+            android:drawablePadding="2dp"
+            android:drawableTop="@mipmap/shouye_wanfashuoming"
+            android:gravity="center_horizontal"
+            android:textSize="12sp"/>
+
+        <RadioButton
+            android:id="@+id/dating"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawablePadding="2dp"
+            android:drawableTop="@mipmap/shouye_youxidating"
+            android:gravity="center_horizontal"
+            android:textSize="12sp"/>
+
+        <RadioButton
+            android:id="@+id/geren"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawablePadding="2dp"
+            android:drawableTop="@mipmap/shouye_gerenzhongxin"
+            android:gravity="center_horizontal"
+            android:textSize="12sp"/>
+    </RadioGroup>
+</LinearLayout>

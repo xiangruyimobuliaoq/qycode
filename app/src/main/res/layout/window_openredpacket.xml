@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#8f000000">
+
+    <LinearLayout
+        android:id="@+id/pop_anima"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@mipmap/open_bg"
+        android:orientation="vertical"
+        android:paddingBottom="20dp">
+
+
+        <ImageView
+
+            android:id="@+id/cancel"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="right"
+            android:layout_margin="8dp"
+            android:src="@mipmap/ic_close"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:padding="2dp"
+                android:src="@mipmap/hongbaosaolei"
+                app:civ_border_color="@color/yellow"
+                app:civ_border_width="2dp"/>
+
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="pl8236448"
+                android:textColor="@color/yellow"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="红包金额: "
+                android:textColor="@color/yellow"
+                android:textSize="16sp"/>
+            <TextView
+                android:id="@+id/leihao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="雷号: "
+                android:textColor="@color/yellow"
+                android:textSize="16sp"/>
+
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="20dp"
+            android:background="@mipmap/ic_open"
+            android:scaleType="centerInside"/>
+    </LinearLayout>
+</RelativeLayout>
+

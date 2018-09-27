@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/bg"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/pop_anima"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/shape_bg_emoj"
+        android:orientation="vertical"
+        android:paddingBottom="20dp">
+
+
+        <com.nst.qycode.view.FlowRadioGroup
+            android:id="@+id/rg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/emoj1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:background="@mipmap/emoj1"
+                android:button="@null"/>
+
+            <RadioButton
+                android:id="@+id/emoj2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@mipmap/emoj2"
+                android:button="@null"/>
+
+            <RadioButton
+                android:id="@+id/emoj3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@mipmap/emoj3"
+                android:button="@null"/>
+
+            <RadioButton
+                android:id="@+id/emoj4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@mipmap/emoj4"
+                android:button="@null"/>
+
+            <RadioButton
+                android:id="@+id/emoj5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:background="@mipmap/emoj5"
+                android:button="@null"/>
+
+            <RadioButton
+                android:id="@+id/emoj6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@mipmap/emoj6"
+                android:button="@null"/>
+
+            <RadioButton
+                android:id="@+id/emoj7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@mipmap/emoj7"
+                android:button="@null"/>
+
+            <RadioButton
+                android:id="@+id/emoj8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@mipmap/emoj8"
+                android:button="@null"/>
+
+        </com.nst.qycode.view.FlowRadioGroup>
+
+
+    </LinearLayout>
+</RelativeLayout>
+

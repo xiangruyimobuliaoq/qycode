@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">聚宝</string>
+    <string name="error_network">无法连接服务器,请检查网络连接</string>
+    <string name="prefix">abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789</string>
+</resources>

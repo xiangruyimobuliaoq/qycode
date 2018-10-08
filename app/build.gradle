@@ -6,8 +6,8 @@ android {
         compileSdkVersion project.ext.compileSdkVersion
         minSdkVersion project.ext.minSdkVersion
         targetSdkVersion project.ext.targetSdkVersion
-        versionCode 6
-        versionName "1.0.1"
+        versionCode 9
+        versionName "1.0.2"
         archivesBaseName = "QYcode-" + versionName
     }
     buildTypes {

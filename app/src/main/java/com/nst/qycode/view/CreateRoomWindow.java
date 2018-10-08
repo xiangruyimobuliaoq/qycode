@@ -52,7 +52,7 @@ public class CreateRoomWindow extends BasePopupWindow {
         roompass = (EditText) findViewById(R.id.roompass);
         createRoom = (ImageButton) findViewById(R.id.createRoom);
         pwdpart = (LinearLayout) findViewById(R.id.pwdpart);
-        InputUtil.setEtFilter(roomname);
+//        InputUtil.setEtFilter(roomname);
         pwd.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {

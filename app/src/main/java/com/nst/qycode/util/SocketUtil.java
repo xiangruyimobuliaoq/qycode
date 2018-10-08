@@ -62,7 +62,8 @@ public class SocketUtil {
     private static IConnectionManager socketManger;
 
     public static void initSocket() {
-        ConnectionInfo info = new ConnectionInfo("13.70.6.71", 1080);
+//        ConnectionInfo info = new ConnectionInfo("13.70.6.71", 1080);
+        ConnectionInfo info = new ConnectionInfo("27.19.196.161", 1080);
         socketManger = OkSocket.open(info);
         socketManger.registerReceiver(new SocketActionAdapter() {
             @Override

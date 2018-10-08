@@ -122,11 +122,12 @@
             <EditText
                 android:id="@+id/roomname"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
+                android:maxLength="20"
+                android:singleLine="true"
                 android:background="@mipmap/di"
                 android:paddingLeft="10dp"
-                android:singleLine="true"
                 android:textColor="@color/white"
                 android:textSize="16sp"/>
         </LinearLayout>

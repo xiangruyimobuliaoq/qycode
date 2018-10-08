@@ -8,6 +8,7 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.ServiceConnection;
+import android.media.MediaPlayer;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.IBinder;
@@ -32,7 +33,7 @@ import java.util.List;
  * 更新时间   $Date$
  * 更新描述   ${TODO}
  */
-public class App extends Application {
+public class App extends Application  {
 
     private static boolean isAppInForeground;
     private static int started;
@@ -40,6 +41,9 @@ public class App extends Application {
 
     private ScreenListener mListener;
     private Intent mIntent;
+
+    private MediaPlayer mediaPlayer;
+
 
     @Override
     public void onCreate() {
@@ -59,25 +63,28 @@ public class App extends Application {
         mIntent.setAction("com.angel.Android.MUSIC");
         mIntent.setPackage(getPackageName());
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            startForegroundService(mIntent);
-        } else {
-            startService(mIntent);
-        }
+//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+//            startForegroundService(mIntent);
+//        } else {
+//            startService(mIntent);
+//        }
+        startMusic();
         mListener = new ScreenListener(this);
         mListener.begin(new ScreenListener.ScreenStateListener() {
             @Override
             public void onScreenOn() {
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                    startForegroundService(mIntent);
-                } else {
-                    startService(mIntent);
-                }
+//                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+//                    startForegroundService(mIntent);
+//                } else {
+//                    startService(mIntent);
+//                }
+                startMusic();
             }
 
             @Override
             public void onScreenOff() {
-                stopService(mIntent);
+//                stopService(mIntent);
+                stopMusic();
             }
 
             @Override
@@ -100,11 +107,12 @@ public class App extends Application {
                 }
                 ++started;
                 if (isAppInForeground()) {
-                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                        startForegroundService(mIntent);
-                    } else {
-                        startService(mIntent);
-                    }
+//                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+////                        startForegroundService(mIntent);
+////                    } else {
+////                        startService(mIntent);
+////                    }
+                    startMusic();
                 }
             }
 
@@ -123,7 +131,8 @@ public class App extends Application {
                     isAppInForeground = false;
                 }
                 if (isAppInBackground()) {
-                    stopService(mIntent);
+//                    stopService(mIntent);
+                    stopMusic();
                 }
             }
 
@@ -158,4 +167,31 @@ public class App extends Application {
         super.attachBaseContext(context);
         MultiDex.install(this);
     }
+
+
+    private void startMusic() {
+        try {
+            if (mediaPlayer == null) {
+                mediaPlayer = MediaPlayer.create(this, R.raw.music);
+                mediaPlayer.setLooping(true);
+    //            mediaPlayer.setOnPreparedListener(this);
+    //            mediaPlayer.prepareAsync();
+                mediaPlayer.start();
+            } else {
+                mediaPlayer.start();
+            }
+        } catch (IllegalStateException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void stopMusic() {
+        try {
+            if (null != mediaPlayer)
+                mediaPlayer.pause();
+        } catch (IllegalStateException e) {
+            e.printStackTrace();
+        }
+    }
+
 }

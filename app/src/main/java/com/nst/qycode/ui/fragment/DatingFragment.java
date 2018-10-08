@@ -35,6 +35,10 @@ import de.hdodenhof.circleimageview.CircleImageView;
 public class DatingFragment extends BaseFragment {
     @BindView(R.id.saolei)
     protected ImageView saolei;
+    @BindView(R.id.jielong)
+    protected ImageView jielong;
+    @BindView(R.id.niuniu)
+    protected ImageView niuniu;
     @BindView(R.id.refresh)
     protected ImageView refresh;
     @BindView(R.id.username)
@@ -60,6 +64,18 @@ public class DatingFragment extends BaseFragment {
             @Override
             public void onClick(View v) {
                 getBalance();
+            }
+        });
+        jielong.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                toast("即将推出");
+            }
+        });
+        niuniu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                toast("即将推出");
             }
         });
     }

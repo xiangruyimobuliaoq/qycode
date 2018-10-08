@@ -193,7 +193,7 @@ public class ChongzhiActivity extends BaseActivity {
 
     @Subscribe(threadMode = ThreadMode.MAIN)
     public void onGetSystemCardReceive(GetSystemCardReceive ev) {
-        toast(ev.Message);
+//        toast(ev.Message);
         if (ev.Status == 1) {
             mInfo = ev.SystemCardInfo;
             BankName.setText("系统开户行名称: " + ev.SystemCardInfo.BankName);
@@ -205,13 +205,13 @@ public class ChongzhiActivity extends BaseActivity {
     @Subscribe(threadMode = ThreadMode.MAIN)
     public void onGetMemberCardReceive(GetMemberCardReceive ev) {
         toast(ev.Message);
+        dismissDialog();
         if (ev.Status == 1) {
             List<String> list = new ArrayList<>();
             for (GetMemberCardReceive.MemberCardInfo info : ev.MemberCardInfo
                     ) {
                 list.add(info.AccountNumber + "   " + info.BankName);
             }
-            dismissDialog();
             if (list.size() == 0) {
                 new MaterialDialog.Builder(this).title("提示")
                         .content("您还未绑定银行卡,是否前去绑定?")
@@ -226,6 +226,17 @@ public class ChongzhiActivity extends BaseActivity {
             } else {
                 showList(list);
             }
+        } else {
+            new MaterialDialog.Builder(this).title("提示")
+                    .content("您还未绑定银行卡,是否前去绑定?")
+                    .positiveText("确定前去")
+                    .negativeText("稍后再说")
+                    .onPositive(new MaterialDialog.SingleButtonCallback() {
+                        @Override
+                        public void onClick(@NonNull MaterialDialog dialog, @NonNull DialogAction which) {
+                            overlay(BindCardActivity.class);
+                        }
+                    }).show();
         }
     }
 

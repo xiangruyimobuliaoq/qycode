@@ -41,6 +41,10 @@ public class LoginActivity extends BaseActivity implements RegisterWindow.Regist
     protected EditText password;
     @BindView(R.id.forgotpwd)
     protected ImageView forgotpwd;
+
+    @BindView(R.id.fab)
+    protected ImageButton fab;
+
     private RegisterWindow mWindow;
     private String mUsername;
     private String mPassword;
@@ -76,6 +80,12 @@ public class LoginActivity extends BaseActivity implements RegisterWindow.Regist
             @Override
             public void onClick(View v) {
                 NumberUtil.splitRedPacket(50, 10);
+            }
+        });
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                overlay(ChartActivity.class);
             }
         });
     }

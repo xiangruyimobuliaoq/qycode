@@ -151,6 +151,7 @@
                 android:src="@mipmap/hongbaosaolei"/>
 
             <ImageView
+                android:id="@+id/jielong"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
@@ -158,6 +159,7 @@
                 android:src="@mipmap/hongbaojielong"/>
 
             <ImageView
+                android:id="@+id/niuniu"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
